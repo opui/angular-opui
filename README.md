@@ -1,4 +1,4 @@
-[angular-opui] — angularUI解决方案
+[angular](https://github.com/opui/angular-opui) — angular UI 解决方案
 ==================================================
 
 Contribution Guides
