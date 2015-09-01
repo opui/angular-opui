@@ -1,4 +1,4 @@
-## 安装
+## 安装，bower安装
 ```
     bower install -g angular-opui
 ```
