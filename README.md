@@ -6,7 +6,7 @@
 
 ## bower安装
 ```bash
-    bower install -g angular-opui
+    bower install angular-opui --save
 ```
 
 ### 1.核心模块
