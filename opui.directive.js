@@ -1,6 +1,6 @@
 /**
  * CMSZ前端UI整合框架，angularjs指令版
- * @version v0.1.0
+ * @version v0.2.0
  * @author 运维运营前端组
  * @license MIT License, http://www.opensource.org/licenses/MI
  */
