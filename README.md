@@ -70,7 +70,7 @@
 >**Note**：
 
 > - 自定义提示插件依赖于bootstrap，下一步准备实现自己的提示插件
-> - 定义2.1的验证指令，必须要写提交指令，否则上面的将不生效
+> - 定义2.1的验证指令，必须要写提交指令，否则添加的验证指令的将不生效
 
 #### 2.3 输入Enter提交表单op-enter
 ```html 
@@ -105,7 +105,7 @@ $scope.queryParams = {is5A: '', ...};
 ### 3.表格模块
 --------------------------------------
 #### 3.1 冻结表头op-freeze-header
-op-freeze-header='id'的id字符串是滚动层的DIV，默认是父层DIV,要配合ng-repeat-finish指令使用，有显示和隐藏的配合show属性操作，表格多选也是可以的。
+op-freeze-header='id'的id字符串是滚动层的DIV，默认是父层DIV。要配合ng-repeat-finish指令使用。有显示和隐藏的配合show属性操作，表格多选也是可以的。
 ```html
     <table class="table table-striped table-hover table-bordered" op-freeze-header='itTable' show="tableIsShow">
         <thead>
