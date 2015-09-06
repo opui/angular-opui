@@ -5,14 +5,14 @@
 --------------------------------------
 
 ## bower安装
-```
+```bash
     bower install -g angular-opui
 ```
 
 ### <i class="icon-file"></i>1.核心模块
 --------------------------------------
 #### 1.1 两个时间输入框，限制输入的是时间段，后一个时间输入框的最小值是前一个输入框的值，使用op-mindate和op-maxdate
-```
+```html
   <div class="btn-group">
     <input type="text" class="form-control input-date" opdatepicker="startDateParams" op-mindate="endDateParams"
         ng-model="queryParams.startDate" ng-change="changeStartDate()" readOnly style="width:130px;">
@@ -28,14 +28,20 @@
 #### 2.1 表单验证
 已实现大部分表单验证：必填验证（required）、特殊字符验证(op-special)、长度验证(op-length)、数据库验证(op-validate)、正则表达式验证(pattern)等，并且实现自定义提示信息(show-msg, show-name)。
 
-示例1：必填并且不能输入特殊字符，并且在50个长度之内，
-`<input ng-model="task.taskName" type="text" name="taskName" required op-special show-msg="请输入1-50汉字、英文、数字或_-" op-length="50"/>`
+示例1：必填并且不能输入特殊字符，并且在50个长度之内
+```html
+<input ng-model="task.taskName" type="text" name="taskName" required op-special show-msg="请输入1-50汉字、英文、数字或_-" op-length="50"/>
+```
 
 示例2：数据库不能重复不能包含特殊字符，显示自定义提示信息
-`<input class="radius-input" type="text" ng-model="service.serviceName" name="serviceName" required op-special show-msg="请输入1-50位的中英文或数字的字符串，不能输入特殊字符"  op-validate="serviceIsExist" old-value="{{oldName}}" op-length="50"/>`
+```html
+<input class="radius-input" type="text" ng-model="service.serviceName" name="serviceName" required op-special show-msg="请输入1-50位的中英文或数字的字符串，不能输入特殊字符"  op-validate="serviceIsExist" old-value="{{oldName}}" op-length="50"/>
+```
 
 示例3：只能输入1-60的正整数
-`<input class="radius-input" ng-model="service.commandTimeout"  show-msg="请输入1-60的正整数！" required pattern="^([1-9]|[1-5][0-9]|60)$" type="number" min="1" max="60" ng-disabled="isDefault"/>`
+```html
+<input class="radius-input" ng-model="service.commandTimeout"  show-msg="请输入1-60的正整数！" required pattern="^([1-9]|[1-5][0-9]|60)$" type="number" min="1" max="60" ng-disabled="isDefault"/>
+```
 
 示例4：输入一个正整数段，有大小限制
 ```html
@@ -57,7 +63,7 @@
 ### <i class="icon-file"></i>3.表格模块
 --------------------------------------
 #### 3.1 冻结表头和点击排序
-```
+```html
     <table class="table table-striped table-hover table-bordered" op-freeze-header show="tableIsShow" list="tableData">
         <thead>
           <tr>
